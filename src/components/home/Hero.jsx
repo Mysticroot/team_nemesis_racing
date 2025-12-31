@@ -5,6 +5,9 @@ import race1 from "../../assets/images/race22.jpg";
 import race2 from "../../assets/images/race2.jpg";
 import race3 from "../../assets/images/race3.jpg";
 
+// 👉 Example video import (use your own file)
+ //import heroVideo from "../../assets/images/herovideo.mp4";
+
 const images = [race1, race2, race3];
 
 export default function HeroSection() {
@@ -21,7 +24,9 @@ export default function HeroSection() {
 
   return (
     <section className="relative h-screen w-full overflow-hidden bg-black">
-      {/* BACKGROUND IMAGE — INSTANT SWAP */}
+      {/* =====================================================
+          IMAGE HERO (CURRENT – ACTIVE)
+      ====================================================== */}
       <img
         key={index}
         src={images[index]}
@@ -30,7 +35,23 @@ export default function HeroSection() {
         draggable="false"
       />
 
-      {/* STATIC OVERLAY (NO ANIMATION) */}
+      {/* =====================================================
+          VIDEO HERO (TESTING – COMMENTED)
+          👉 Uncomment this block and comment the <img> above
+          👉 Good for checking motion, drama, and branding feel
+      ====================================================== */}
+      
+      {/* <video
+        className="absolute inset-0 h-full w-full object-cover"
+        src={heroVideo}
+        autoPlay
+        loop
+        muted
+        playsInline
+      /> */}
+     
+
+      {/* STATIC OVERLAY (WORKS FOR BOTH IMAGE & VIDEO) */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/25 to-black/10" />
 
       {/* CONTENT */}
@@ -42,7 +63,7 @@ export default function HeroSection() {
           className="max-w-4xl"
         >
           <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl uppercase font-extrabold leading-tight text-white">
-            TEAM  NEMESIS
+            TEAM NEMESIS
           </h1>
 
           <h2 className="mt-4 text-2xl sm:text-3xl lg:text-4xl font-heading uppercase tracking-wide text-white/90">
