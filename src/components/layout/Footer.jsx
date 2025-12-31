@@ -93,7 +93,7 @@ export default function Footer() {
                 },
                 {
                   icon: FaXTwitter,
-                  link: "https://x.com/NemesisRacing",
+                  link: "https://x.com/NEMESIS_COEP",
                   label: "Twitter / X",
                 },
                 {
